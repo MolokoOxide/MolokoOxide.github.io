@@ -13,6 +13,20 @@
     <!-- Подключение иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111399314', 'ym');
+
+        ym(111399314, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111399314" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <style>
         :root {
             --bg-color: #0f0f13;
@@ -40,16 +54,14 @@
                 radial-gradient(circle at 50% 0%, #1a1a24 0%, #0f0f13 80%);
             color: var(--text-color);
             font-family: 'Nunito', sans-serif;
-            /* Изменено: теперь подстраивается под контент, но занимает не меньше 1 экрана */
             min-height: 100vh; 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px; /* Отступы для ПК, чтобы блок дышал */
+            padding: 40px 20px;
         }
 
-        /* ДИЗАЙН ДЛЯ ПК (Крупные элементы, красивое стекло) */
         .container {
             max-width: 600px;
             width: 100%;
@@ -139,7 +151,6 @@
             margin-top: 4px;
         }
 
-        /* Анимации наведения (только для мышки на ПК) */
         @media (hover: hover) {
             .tg-btn:hover { border-color: var(--tg-color); transform: translateY(-3px); background: rgba(0, 136, 204, 0.1); }
             .tg-btn:hover i { color: var(--tg-color); transform: scale(1.15); }
@@ -159,7 +170,6 @@
             .donate-btn:hover i { color: var(--donate-color); transform: scale(1.15); }
         }
 
-        /* Блок спонсора */
         .sponsor-block {
             width: 100%;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.09) 100%);
@@ -180,17 +190,14 @@
 
         .sponsor-img {
             max-width: 100%;
-            max-height: 120px; /* Крупно для ПК */
+            max-height: 120px;
             border-radius: 10px;
             object-fit: contain;
         }
 
-        /* ========================================= */
-        /* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ (Экраны уже 600px) */
-        /* ========================================= */
         @media (max-width: 600px) {
             body {
-                padding: 15px 10px; /* Уменьшаем отступы на мобилках */
+                padding: 15px 10px;
             }
 
             .container {
@@ -202,14 +209,14 @@
             }
 
             .avatar {
-                width: 100px; /* Уменьшаем аватарку */
+                width: 100px;
                 height: 100px;
                 border-width: 3px;
                 margin-bottom: 15px;
             }
 
             h1 {
-                font-size: 1.6rem; /* Уменьшаем заголовок */
+                font-size: 1.6rem;
                 margin-bottom: 20px;
             }
 
@@ -219,7 +226,7 @@
             }
 
             .link-btn {
-                padding: 12px 15px; /* Кнопки компактнее */
+                padding: 12px 15px;
                 border-radius: 14px;
             }
 
@@ -242,14 +249,29 @@
             }
 
             .sponsor-img {
-                max-height: 70px; /* Баннер компактнее на телефонах */
+                max-height: 70px;
             }
 
-            /* Включаем цветные иконки на телефонах постоянно, так как там нет наведения мышки */
             .tg-btn i { color: #55b4e6; }
             .yt-btn i { color: #ff4d4d; }
             .tt-btn i { color: #ffffff; text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta); }
             .donate-btn i { color: #ffd166; }
+        }
+
+        /* 👇 НОВЫЙ БЛОК СО СЧЁТЧИКОМ ПРОСМОТРОВ */
+        .counter-block {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #8899aa;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .counter-block img {
+            vertical-align: middle;
+            margin-left: 6px;
         }
     </style>
 </head>
@@ -303,6 +325,11 @@
             <a href="https://donatov.net/ref/MOLOKO" target="_blank" rel="noopener noreferrer">
                 <img src="https://1lag.com/wp-content/uploads/2024/11/unnamed-1-8.jpg" alt="DONATOVNET" class="sponsor-img" onerror="this.onerror=null; this.src='https://placehold.co/500x100/1a1a24/ffffff?text=DONATOV.NET';">
             </a>
+        </div>
+
+        <!-- 👇 СЧЁТЧИК ПРОСМОТРОВ (ВИДИМЫЙ) -->
+        <div class="counter-block">
+            👀 Просмотров: <img src="https://visitor-badge.laobi.icu/badge?page_id=molokoxide" alt="visitor count">
         </div>
     </div>
 </body>
