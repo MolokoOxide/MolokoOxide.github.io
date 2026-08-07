@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- SEO Оптимизация -->
-    <meta name="description" content="МОЛОКО - Официальные ссылки и социальные сети. Oxide Survival Island, рейды и пвп.">
-    <meta name="keywords" content="oxidesurvivalisland, оксайд, рейдыипвп, oxideraid, молокооксайд">
-    <title>МОЛОКО | Ссылки и Соцсети</title>
-    
-    <!-- Подключение шрифтов -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Подключение иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter (САМОЕ ПЕРВОЕ В HEAD) -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -22,10 +10,24 @@
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111399314', 'ym');
 
-        ym(111399314, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        ym(111399314, 'init', {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/111399314" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="МОЛОКО - Официальные ссылки и социальные сети. Oxide Survival Island, рейды и пвп.">
+    <meta name="keywords" content="oxidesurvivalisland, оксайд, рейдыипвп, oxideraid, молокооксайд">
+    <title>МОЛОКО | Ссылки и Соцсети</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -154,10 +156,8 @@
         @media (hover: hover) {
             .tg-btn:hover { border-color: var(--tg-color); transform: translateY(-3px); background: rgba(0, 136, 204, 0.1); }
             .tg-btn:hover i { color: var(--tg-color); transform: scale(1.15); }
-
             .yt-btn:hover { border-color: var(--yt-color); transform: translateY(-3px); background: rgba(255, 0, 0, 0.1); }
             .yt-btn:hover i { color: var(--yt-color); transform: scale(1.15); }
-
             .tt-btn:hover { border-color: var(--tt-cyan); transform: translateY(-3px); background: rgba(255, 255, 255, 0.08); }
             .tt-btn:hover i { 
                 background: linear-gradient(45deg, var(--tt-cyan), var(--tt-magenta));
@@ -165,7 +165,6 @@
                 -webkit-text-fill-color: transparent;
                 transform: scale(1.15);
             }
-
             .donate-btn:hover { border-color: var(--donate-color); transform: translateY(-3px); background: rgba(255, 170, 0, 0.1); }
             .donate-btn:hover i { color: var(--donate-color); transform: scale(1.15); }
         }
@@ -199,7 +198,6 @@
             body {
                 padding: 15px 10px;
             }
-
             .container {
                 padding: 20px 10px;
                 background: transparent;
@@ -207,83 +205,55 @@
                 border: none;
                 backdrop-filter: none;
             }
-
             .avatar {
                 width: 100px;
                 height: 100px;
                 border-width: 3px;
                 margin-bottom: 15px;
             }
-
             h1 {
                 font-size: 1.6rem;
                 margin-bottom: 20px;
             }
-
             .links-container {
                 gap: 12px;
                 margin-bottom: 20px;
             }
-
             .link-btn {
                 padding: 12px 15px;
                 border-radius: 14px;
             }
-
             .link-btn i {
                 font-size: 1.8rem;
                 margin-right: 15px;
                 width: 35px;
             }
-
             .link-title {
                 font-size: 0.95rem;
             }
-
             .link-subtitle {
                 font-size: 0.75rem;
             }
-
             .sponsor-block {
                 padding: 15px 10px;
             }
-
             .sponsor-img {
                 max-height: 70px;
             }
-
             .tg-btn i { color: #55b4e6; }
             .yt-btn i { color: #ff4d4d; }
             .tt-btn i { color: #ffffff; text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta); }
             .donate-btn i { color: #ffd166; }
         }
-
-        /* 👇 НОВЫЙ БЛОК СО СЧЁТЧИКОМ ПРОСМОТРОВ */
-        .counter-block {
-            width: 100%;
-            margin-top: 20px;
-            padding: 12px;
-            text-align: center;
-            font-size: 0.95rem;
-            color: #8899aa;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .counter-block img {
-            vertical-align: middle;
-            margin-left: 6px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Аватарка -->
         <img src="https://yt3.ggpht.com/IWJtAKWNfZiE_-3f05LCWBHeTrFMmv1t0bJis7heZfNj-F-pqUyVwubfMKzqXXeVLEFNMD9PNw=s160-c-k-c0x00ffffff-no-rj" alt="МОЛОКО Аватар" class="avatar">
         
         <h1>МОЛОКО</h1>
 
         <div class="links-container">
-            <!-- Telegram -->
             <a href="https://t.me/+K0oiWTAjMNA4NzZi" class="link-btn tg-btn" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-telegram"></i>
                 <div class="link-content">
@@ -292,7 +262,6 @@
                 </div>
             </a>
 
-            <!-- YouTube -->
             <a href="https://www.youtube.com/@MolokoOxide" class="link-btn yt-btn" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-youtube"></i>
                 <div class="link-content">
@@ -301,7 +270,6 @@
                 </div>
             </a>
 
-            <!-- TikTok -->
             <a href="https://www.tiktok.com/@molokooxide" class="link-btn tt-btn" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-tiktok"></i>
                 <div class="link-content">
@@ -309,7 +277,6 @@
                 </div>
             </a>
 
-            <!-- Донат -->
             <a href="https://dalink.to/moloko12401" class="link-btn donate-btn" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-heart"></i>
                 <div class="link-content">
@@ -319,7 +286,6 @@
             </a>
         </div>
 
-        <!-- Спонсор -->
         <div class="sponsor-block">
             <div class="sponsor-title">Мой спонсор DONATOVNET</div>
             <a href="https://donatov.net/ref/MOLOKO" target="_blank" rel="noopener noreferrer">
@@ -327,10 +293,8 @@
             </a>
         </div>
 
-        <!-- 👇 СЧЁТЧИК ПРОСМОТРОВ (ВИДИМЫЙ) -->
-        <div class="counter-block">
-            👀 Просмотров: <img src="https://visitor-badge.laobi.icu/badge?page_id=molokoxide" alt="visitor count">
-        </div>
+        <!-- ============ СЧЁТЧИК УБРАН ============ -->
+        <!-- Тут больше ничего нет -->
     </div>
 </body>
 </html>
