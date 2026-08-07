@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- SEO Оптимизация -->
+    <meta name="description" content="МОЛОКО - Официальные ссылки и социальные сети. Oxide Survival Island, рейды и пвп.">
+    <meta name="keywords" content="oxidesurvivalisland, оксайд, рейдыипвп, oxideraid, молокооксайд">
+    <title>МОЛОКО | Ссылки и Соцсети</title>
+    
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключение иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f0f13;
+            --text-color: #ffffff;
+            --accent-glow: rgba(255, 69, 0, 0.6);
+            --tg-color: #0088cc;
+            --yt-color: #ff0000;
+            --tt-cyan: #00f2fe;
+            --tt-magenta: #fe0979;
+            --donate-color: #ffaa00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(255, 69, 0, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(0, 136, 204, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 0%, #1a1a24 0%, #0f0f13 80%);
+            color: var(--text-color);
+            font-family: 'Nunito', sans-serif;
+            /* Изменено: теперь подстраивается под контент, но занимает не меньше 1 экрана */
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px; /* Отступы для ПК, чтобы блок дышал */
+        }
+
+        /* ДИЗАЙН ДЛЯ ПК (Крупные элементы, красивое стекло) */
+        .container {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+            background: rgba(25, 25, 36, 0.4);
+            border-radius: 30px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.8);
+            box-shadow: 0 0 20px var(--accent-glow);
+            animation: float 4s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+            text-align: center;
+        }
+
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 16px 20px;
+            border-radius: 16px;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .link-btn i {
+            font-size: 2.2rem;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+            width: 45px;
+            text-align: center;
+        }
+
+        .link-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .link-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .link-subtitle {
+            font-size: 0.85rem;
+            color: #b0b0b0;
+            margin-top: 4px;
+        }
+
+        /* Анимации наведения (только для мышки на ПК) */
+        @media (hover: hover) {
+            .tg-btn:hover { border-color: var(--tg-color); transform: translateY(-3px); background: rgba(0, 136, 204, 0.1); }
+            .tg-btn:hover i { color: var(--tg-color); transform: scale(1.15); }
+
+            .yt-btn:hover { border-color: var(--yt-color); transform: translateY(-3px); background: rgba(255, 0, 0, 0.1); }
+            .yt-btn:hover i { color: var(--yt-color); transform: scale(1.15); }
+
+            .tt-btn:hover { border-color: var(--tt-cyan); transform: translateY(-3px); background: rgba(255, 255, 255, 0.08); }
+            .tt-btn:hover i { 
+                background: linear-gradient(45deg, var(--tt-cyan), var(--tt-magenta));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(1.15);
+            }
+
+            .donate-btn:hover { border-color: var(--donate-color); transform: translateY(-3px); background: rgba(255, 170, 0, 0.1); }
+            .donate-btn:hover i { color: var(--donate-color); transform: scale(1.15); }
+        }
+
+        /* Блок спонсора */
+        .sponsor-block {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.09) 100%);
+            border-radius: 18px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sponsor-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .sponsor-img {
+            max-width: 100%;
+            max-height: 120px; /* Крупно для ПК */
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        /* ========================================= */
+        /* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ (Экраны уже 600px) */
+        /* ========================================= */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px; /* Уменьшаем отступы на мобилках */
+            }
+
+            .container {
+                padding: 20px 10px;
+                background: transparent;
+                box-shadow: none;
+                border: none;
+                backdrop-filter: none;
+            }
+
+            .avatar {
+                width: 100px; /* Уменьшаем аватарку */
+                height: 100px;
+                border-width: 3px;
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                font-size: 1.6rem; /* Уменьшаем заголовок */
+                margin-bottom: 20px;
+            }
+
+            .links-container {
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+
+            .link-btn {
+                padding: 12px 15px; /* Кнопки компактнее */
+                border-radius: 14px;
+            }
+
+            .link-btn i {
+                font-size: 1.8rem;
+                margin-right: 15px;
+                width: 35px;
+            }
+
+            .link-title {
+                font-size: 0.95rem;
+            }
+
+            .link-subtitle {
+                font-size: 0.75rem;
+            }
+
+            .sponsor-block {
+                padding: 15px 10px;
+            }
+
+            .sponsor-img {
+                max-height: 70px; /* Баннер компактнее на телефонах */
+            }
+
+            /* Включаем цветные иконки на телефонах постоянно, так как там нет наведения мышки */
+            .tg-btn i { color: #55b4e6; }
+            .yt-btn i { color: #ff4d4d; }
+            .tt-btn i { color: #ffffff; text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta); }
+            .donate-btn i { color: #ffd166; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Аватарка -->
+        <img src="https://yt3.ggpht.com/IWJtAKWNfZiE_-3f05LCWBHeTrFMmv1t0bJis7heZfNj-F-pqUyVwubfMKzqXXeVLEFNMD9PNw=s160-c-k-c0x00ffffff-no-rj" alt="МОЛОКО Аватар" class="avatar">
+        
+        <h1>МОЛОКО</h1>
+
+        <div class="links-container">
+            <!-- Telegram -->
+            <a href="https://t.me/+K0oiWTAjMNA4NzZi" class="link-btn tg-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-telegram"></i>
+                <div class="link-content">
+                    <span class="link-title">МОЛОКО в telegram</span>
+                    <span class="link-subtitle">новости, анонсы, конкурсы</span>
+                </div>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@MolokoOxide" class="link-btn yt-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+                <div class="link-content">
+                    <span class="link-title">МОЛОКО на ютубе</span>
+                    <span class="link-subtitle">длинные видео самый кайф</span>
+                </div>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@molokooxide" class="link-btn tt-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok"></i>
+                <div class="link-content">
+                    <span class="link-title">МОЛОКО в тик ток</span>
+                </div>
+            </a>
+
+            <!-- Донат -->
+            <a href="https://dalink.to/moloko12401" class="link-btn donate-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-heart"></i>
+                <div class="link-content">
+                    <span class="link-title">Поддержать МОЛОКО</span>
+                    <span class="link-subtitle">донаты попадут в видео</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Спонсор -->
+        <div class="sponsor-block">
+            <div class="sponsor-title">Мой спонсор DONATOVNET</div>
+            <a href="https://donatov.net/ref/MOLOKO" target="_blank" rel="noopener noreferrer">
+                <img src="https://1lag.com/wp-content/uploads/2024/11/unnamed-1-8.jpg" alt="DONATOVNET" class="sponsor-img" onerror="this.onerror=null; this.src='https://placehold.co/500x100/1a1a24/ffffff?text=DONATOV.NET';">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
