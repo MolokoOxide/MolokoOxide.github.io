@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Yandex.Metrika counter (САМОЕ ПЕРВОЕ В HEAD) -->
+    <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111399314', 'ym');
+        })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=111399314','ym');
 
-        ym(111399314, 'init', {
+        ym(111399314,'init',{
             clickmap:true,
             trackLinks:true,
             accurateTrackBounce:true,
             webvisor:true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/111399314" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <noscript><div><img src="https://mc.yandex.ru/watch/111399314" style="position:absolute;left:-9999px;" alt="Yandex Metrika" /></div></noscript>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="МОЛОКО - Официальные ссылки и социальные сети. Oxide Survival Island, рейды и пвп.">
-    <meta name="keywords" content="oxidesurvivalisland, оксайд, рейдыипвп, oxideraid, молокооксайд">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="МОЛОКО - Официальные ссылки и социальные сети. Oxide Survival Island, рейды и PvP контент.">
+    <meta name="keywords" content="oxidesurvivalisland, оксайд, рейдыипвп, oxideraid, молокооксайд, молоко">
+    <meta name="theme-color" content="#0f0f13">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="МОЛОКО | Официальные ссылки">
+    <meta property="og:description" content="Все ссылки и соцсети МОЛОКО в одном месте">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yt3.ggpht.com/IWJtAKWNfZiE_-3f05LCWBHeTrFMmv1t0bJis7heZfNj-F-pqUyVwubfMKzqXXeVLEFNMD9PNw=s160-c-k-c0x00ffffff-no-rj">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="МОЛОКО | Официальные ссылки">
+    <meta name="twitter:image" content="https://yt3.ggpht.com/IWJtAKWNfZiE_-3f05LCWBHeTrFMmv1t0bJis7heZfNj-F-pqUyVwubfMKzqXXeVLEFNMD9PNw=s160-c-k-c0x00ffffff-no-rj">
+
     <title>МОЛОКО | Ссылки и Соцсети</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
-        :root {
-            --bg-color: #0f0f13;
-            --text-color: #ffffff;
-            --accent-glow: rgba(255, 69, 0, 0.6);
-            --tg-color: #0088cc;
-            --yt-color: #ff0000;
-            --tt-cyan: #00f2fe;
-            --tt-magenta: #fe0979;
-            --donate-color: #ffaa00;
-        }
-
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -48,66 +52,100 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        :root {
+            --bg-primary: #0f0f13;
+            --bg-secondary: #1a1a24;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-glow: rgba(255, 69, 0, 0.6);
+            --border-color: rgba(255, 255, 255, 0.05);
+            --border-hover: rgba(255, 255, 255, 0.12);
+            
+            --tg-color: #0088cc;
+            --yt-color: #ff0000;
+            --tt-cyan: #00f2fe;
+            --tt-magenta: #fe0979;
+            --donate-color: #ffaa00;
+            
+            --radius-lg: 30px;
+            --radius-md: 18px;
+            --radius-sm: 16px;
+            --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-primary);
             background-image: 
-                radial-gradient(circle at 15% 50%, rgba(255, 69, 0, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(0, 136, 204, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 50% 0%, #1a1a24 0%, #0f0f13 80%);
-            color: var(--text-color);
+                radial-gradient(circle at 15% 50%, rgba(255, 69, 0, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(0, 136, 204, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 50% 0%, var(--bg-secondary) 0%, var(--bg-primary) 80%);
+            color: var(--text-primary);
             font-family: 'Nunito', sans-serif;
-            min-height: 100vh; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 40px 20px;
+            line-height: 1.5;
         }
 
+        /* ===== CONTAINER ===== */
         .container {
             max-width: 600px;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 10;
             background: rgba(25, 25, 36, 0.4);
-            border-radius: 30px;
+            border-radius: var(--radius-lg);
             padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* ===== AVATAR ===== */
+        .avatar-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
         }
 
         .avatar {
-            width: 140px;
-            height: 140px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgba(255,255,255,0.8);
+            border: 4px solid rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 20px var(--accent-glow);
             animation: float 4s ease-in-out infinite;
-            margin-bottom: 20px;
+            will-change: transform;
+            display: block;
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
+            0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
         }
 
+        /* ===== TITLE ===== */
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 30px;
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
             text-align: center;
+            font-weight: 800;
         }
 
+        /* ===== LINKS ===== */
         .links-container {
-            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -120,24 +158,34 @@
             text-decoration: none;
             background: rgba(255, 255, 255, 0.06);
             padding: 16px 20px;
-            border-radius: 16px;
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            transition: all var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Touch feedback */
+        .link-btn:active {
+            transform: scale(0.97);
         }
 
         .link-btn i {
             font-size: 2.2rem;
             margin-right: 20px;
-            transition: transform 0.3s ease;
+            transition: transform var(--transition);
             width: 45px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         .link-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            min-width: 0;
         }
 
         .link-title {
@@ -149,33 +197,57 @@
 
         .link-subtitle {
             font-size: 0.85rem;
-            color: #b0b0b0;
-            margin-top: 4px;
+            color: var(--text-secondary);
+            margin-top: 2px;
         }
 
+        /* Hover effects (desktop only) */
         @media (hover: hover) {
-            .tg-btn:hover { border-color: var(--tg-color); transform: translateY(-3px); background: rgba(0, 136, 204, 0.1); }
-            .tg-btn:hover i { color: var(--tg-color); transform: scale(1.15); }
-            .yt-btn:hover { border-color: var(--yt-color); transform: translateY(-3px); background: rgba(255, 0, 0, 0.1); }
-            .yt-btn:hover i { color: var(--yt-color); transform: scale(1.15); }
-            .tt-btn:hover { border-color: var(--tt-cyan); transform: translateY(-3px); background: rgba(255, 255, 255, 0.08); }
-            .tt-btn:hover i { 
+            .link-btn:hover {
+                transform: translateY(-3px);
+            }
+            .link-btn:hover i {
+                transform: scale(1.15);
+            }
+            
+            .tg-btn:hover {
+                border-color: var(--tg-color);
+                background: rgba(0, 136, 204, 0.1);
+            }
+            .tg-btn:hover i { color: var(--tg-color); }
+            
+            .yt-btn:hover {
+                border-color: var(--yt-color);
+                background: rgba(255, 0, 0, 0.1);
+            }
+            .yt-btn:hover i { color: var(--yt-color); }
+            
+            .tt-btn:hover {
+                border-color: var(--tt-cyan);
+                background: rgba(255, 255, 255, 0.08);
+            }
+            .tt-btn:hover i {
                 background: linear-gradient(45deg, var(--tt-cyan), var(--tt-magenta));
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                transform: scale(1.15);
+                background-clip: text;
             }
-            .donate-btn:hover { border-color: var(--donate-color); transform: translateY(-3px); background: rgba(255, 170, 0, 0.1); }
-            .donate-btn:hover i { color: var(--donate-color); transform: scale(1.15); }
+            
+            .donate-btn:hover {
+                border-color: var(--donate-color);
+                background: rgba(255, 170, 0, 0.1);
+            }
+            .donate-btn:hover i { color: var(--donate-color); }
         }
 
+        /* ===== SPONSOR ===== */
         .sponsor-block {
             width: 100%;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.09) 100%);
-            border-radius: 18px;
+            border-radius: var(--radius-md);
             padding: 20px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid var(--border-color);
         }
 
         .sponsor-title {
@@ -183,8 +255,17 @@
             font-size: 0.95rem;
             font-weight: 800;
             margin-bottom: 12px;
-            color: #fff;
             text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sponsor-link {
+            display: inline-block;
+            transition: opacity var(--transition);
+        }
+        
+        .sponsor-link:hover {
+            opacity: 0.8;
         }
 
         .sponsor-img {
@@ -192,109 +273,192 @@
             max-height: 120px;
             border-radius: 10px;
             object-fit: contain;
+            display: block;
+            margin: 0 auto;
         }
 
+        /* ===== MOBILE ===== */
         @media (max-width: 600px) {
             body {
                 padding: 15px 10px;
             }
+            
             .container {
-                padding: 20px 10px;
+                padding: 20px 15px;
                 background: transparent;
                 box-shadow: none;
                 border: none;
                 backdrop-filter: none;
+                -webkit-backdrop-filter: none;
             }
-            .avatar {
+            
+            .avatar-wrapper {
                 width: 100px;
                 height: 100px;
-                border-width: 3px;
-                margin-bottom: 15px;
             }
+            
+            .avatar {
+                border-width: 3px;
+            }
+            
             h1 {
                 font-size: 1.6rem;
                 margin-bottom: 20px;
             }
+            
             .links-container {
                 gap: 12px;
                 margin-bottom: 20px;
             }
+            
             .link-btn {
                 padding: 12px 15px;
                 border-radius: 14px;
             }
+            
             .link-btn i {
                 font-size: 1.8rem;
                 margin-right: 15px;
                 width: 35px;
             }
+            
             .link-title {
                 font-size: 0.95rem;
             }
+            
             .link-subtitle {
                 font-size: 0.75rem;
             }
+            
             .sponsor-block {
-                padding: 15px 10px;
+                padding: 15px 12px;
             }
+            
             .sponsor-img {
                 max-height: 70px;
             }
+
+            /* Mobile icon colors */
             .tg-btn i { color: #55b4e6; }
             .yt-btn i { color: #ff4d4d; }
-            .tt-btn i { color: #ffffff; text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta); }
+            .tt-btn i { 
+                color: #ffffff;
+                text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta);
+            }
             .donate-btn i { color: #ffd166; }
+        }
+
+        /* ===== UTILITY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://yt3.ggpht.com/IWJtAKWNfZiE_-3f05LCWBHeTrFMmv1t0bJis7heZfNj-F-pqUyVwubfMKzqXXeVLEFNMD9PNw=s160-c-k-c0x00ffffff-no-rj" alt="МОЛОКО Аватар" class="avatar">
+    <main class="container" role="main">
+        <!-- Avatar -->
+        <div class="avatar-wrapper">
+            <img 
+                src="https://yt3.ggpht.com/IWJtAKWNfZiE_-3f05LCWBHeTrFMmv1t0bJis7heZfNj-F-pqUyVwubfMKzqXXeVLEFNMD9PNw=s160-c-k-c0x00ffffff-no-rj" 
+                alt="Аватар МОЛОКО" 
+                class="avatar" 
+                width="140" 
+                height="140"
+                loading="lazy"
+                decoding="async"
+            >
+        </div>
         
         <h1>МОЛОКО</h1>
 
-        <div class="links-container">
-            <a href="https://t.me/+K0oiWTAjMNA4NzZi" class="link-btn tg-btn" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-telegram"></i>
+        <!-- Links -->
+        <section class="links-container" aria-label="Социальные сети и ссылки">
+            <a 
+                href="https://t.me/+K0oiWTAjMNA4NzZi" 
+                class="link-btn tg-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Telegram канал МОЛОКО"
+            >
+                <i class="fa-brands fa-telegram" aria-hidden="true"></i>
                 <div class="link-content">
                     <span class="link-title">МОЛОКО в telegram</span>
                     <span class="link-subtitle">новости, анонсы, конкурсы</span>
                 </div>
             </a>
 
-            <a href="https://www.youtube.com/@MolokoOxide" class="link-btn yt-btn" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-youtube"></i>
+            <a 
+                href="https://www.youtube.com/@MolokoOxide" 
+                class="link-btn yt-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="YouTube канал МОЛОКО"
+            >
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
                 <div class="link-content">
                     <span class="link-title">МОЛОКО на ютубе</span>
                     <span class="link-subtitle">длинные видео самый кайф</span>
                 </div>
             </a>
 
-            <a href="https://www.tiktok.com/@molokooxide" class="link-btn tt-btn" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-tiktok"></i>
+            <a 
+                href="https://www.tiktok.com/@molokooxide" 
+                class="link-btn tt-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="TikTok аккаунт МОЛОКО"
+            >
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
                 <div class="link-content">
                     <span class="link-title">МОЛОКО в тик ток</span>
+                    <span class="link-subtitle">короткие видео</span>
                 </div>
             </a>
 
-            <a href="https://dalink.to/moloko12401" class="link-btn donate-btn" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-heart"></i>
+            <a 
+                href="https://dalink.to/moloko12401" 
+                class="link-btn donate-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Поддержать МОЛОКО донатом"
+            >
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
                 <div class="link-content">
                     <span class="link-title">Поддержать МОЛОКО</span>
                     <span class="link-subtitle">донаты попадут в видео</span>
                 </div>
             </a>
-        </div>
+        </section>
 
-        <div class="sponsor-block">
+        <!-- Sponsor -->
+        <aside class="sponsor-block" aria-label="Спонсор">
             <div class="sponsor-title">Мой спонсор DONATOVNET</div>
-            <a href="https://donatov.net/ref/MOLOKO" target="_blank" rel="noopener noreferrer">
-                <img src="https://1lag.com/wp-content/uploads/2024/11/unnamed-1-8.jpg" alt="DONATOVNET" class="sponsor-img" onerror="this.onerror=null; this.src='https://placehold.co/500x100/1a1a24/ffffff?text=DONATOV.NET';">
+            <a 
+                href="https://donatov.net/ref/MOLOKO" 
+                class="sponsor-link"
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Перейти на сайт спонсора Donatov.net"
+            >
+                <img 
+                    src="https://1lag.com/wp-content/uploads/2024/11/unnamed-1-8.jpg" 
+                    alt="Логотип DONATOVNET" 
+                    class="sponsor-img"
+                    width="500"
+                    height="100"
+                    loading="lazy"
+                    decoding="async"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22100%22%3E%3Crect fill=%22%231a1a24%22 width=%22500%22 height=%22100%22/%3E%3Ctext x=%22250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22Arial%22 font-size=%2224%22 font-weight=%22bold%22%3EDONATOV.NET%3C/text%3E%3C/svg%3E'"
+                >
             </a>
-        </div>
-
-        <!-- ============ СЧЁТЧИК УБРАН ============ -->
-        <!-- Тут больше ничего нет -->
-    </div>
+        </aside>
+    </main>
 </body>
 </html>
