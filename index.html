@@ -38,17 +38,17 @@
         :root {
             --bg-primary: #0a0a0f;
             --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
+            --text-secondary: #e4e4e7;
             
-            --tg-color: #0088cc;
-            --yt-color: #ff0000;
+            --tg-color: #55b4e6;
+            --yt-color: #ff4d4d;
             --tt-cyan: #00f2fe;
             --tt-magenta: #fe0979;
-            --donate-color: #ffaa00;
+            --donate-color: #ffd166;
             
             --radius-lg: 32px;
-            --radius-md: 20px;
-            --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-md: 16px; /* Унифицированный радиус для всех устройств */
+            --transition: 0.3s ease;
         }
 
         body {
@@ -64,67 +64,48 @@
             overflow-x: hidden;
         }
 
-        /* ===== ANIMATED MINIMAL BACKGROUND ===== */
-        .bg-animated {
+        /* ===== ЖИВОЙ ФОН: РАЗМЫТИЕ И АНИМАЦИЯ ===== */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            background-image: url('https://art.playoxide.com/assets/desktop-06.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(4px);
+            animation: bgBreathe 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgBreathe {
+            0% { transform: scale(1.03); }
+            100% { transform: scale(1.12); }
+        }
+
+        .bg-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             z-index: -1;
-            overflow: hidden;
-            background-color: var(--bg-primary);
-        }
-
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.7;
-            will-change: transform;
-        }
-
-        /* Оранжевое свечение (верх-лево) */
-        .blob-1 {
-            width: 45vw;
-            height: 45vw;
-            background: rgba(255, 69, 0, 0.07);
-            top: -15%;
-            left: -10%;
-            animation: floatBlob1 18s ease-in-out infinite alternate;
-        }
-
-        /* Синее свечение (низ-право) */
-        .blob-2 {
-            width: 40vw;
-            height: 40vw;
-            background: rgba(0, 136, 204, 0.07);
-            bottom: -15%;
-            right: -10%;
-            animation: floatBlob2 22s ease-in-out infinite alternate;
-        }
-
-        @keyframes floatBlob1 {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(15vw, 10vh) scale(1.1); }
-        }
-
-        @keyframes floatBlob2 {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(-10vw, -15vh) scale(1.2); }
+            background: rgba(0, 0, 0, 0.55); 
         }
 
         /* ===== CONTAINER (Глассморфизм) ===== */
         .container {
             max-width: 540px;
             width: 100%;
-            background: linear-gradient(180deg, rgba(30, 30, 42, 0.6) 0%, rgba(20, 20, 28, 0.4) 100%);
+            background: linear-gradient(180deg, rgba(30, 30, 42, 0.65) 0%, rgba(20, 20, 28, 0.45) 100%);
             border-radius: var(--radius-lg);
             padding: 45px 40px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             position: relative;
             z-index: 1;
         }
@@ -137,8 +118,8 @@
 
         .avatar-wrapper {
             position: relative;
-            width: 130px;
-            height: 130px;
+            width: 120px; /* Унифицированный размер */
+            height: 120px;
             margin: 0 auto 20px;
         }
 
@@ -159,7 +140,7 @@
 
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 800;
@@ -168,11 +149,11 @@
 
         .bio {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
         }
 
-        /* ===== LINKS ===== */
+        /* ===== LINKS (ЕДИНЫЙ ДИЗАЙН ДЛЯ ПК И ТЕЛЕФОНОВ) ===== */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -184,23 +165,29 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 16px 22px;
+            background: rgba(255, 255, 255, 0.08); /* Единый фон */
+            padding: 14px 18px; /* Единые отступы */
             border-radius: var(--radius-md);
             color: var(--text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
 
         .link-btn i {
-            font-size: 2rem;
-            margin-right: 20px;
-            width: 40px;
+            font-size: 1.8rem; /* Единый размер иконок */
+            margin-right: 15px;
+            width: 35px;
             text-align: center;
             transition: var(--transition);
         }
+
+        /* Цвета иконок по умолчанию (теперь одинаково везде) */
+        .tg-btn i { color: var(--tg-color); }
+        .yt-btn i { color: var(--yt-color); }
+        .tt-btn i { color: #fff; text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta); }
+        .donate-btn i { color: var(--donate-color); }
 
         .link-content {
             display: flex;
@@ -219,45 +206,40 @@
             margin-top: 3px;
         }
 
-        /* Hover эффекты */
+        /* Hover эффекты (сработают только там, где поддерживается мышь) */
         @media (hover: hover) {
             .link-btn:hover {
-                transform: translateY(-4px) scale(1.01);
-                background: rgba(255, 255, 255, 0.08);
+                transform: translateY(-3px);
+                background: rgba(255, 255, 255, 0.12);
             }
-            .tg-btn:hover { border-color: var(--tg-color); box-shadow: 0 10px 20px rgba(0, 136, 204, 0.15); }
-            .tg-btn:hover i { color: var(--tg-color); transform: scale(1.1); }
+            .tg-btn:hover { border-color: var(--tg-color); box-shadow: 0 8px 15px rgba(85, 180, 230, 0.2); }
+            .tg-btn:hover i { transform: scale(1.1); }
             
-            .yt-btn:hover { border-color: var(--yt-color); box-shadow: 0 10px 20px rgba(255, 0, 0, 0.15); }
-            .yt-btn:hover i { color: var(--yt-color); transform: scale(1.1); }
+            .yt-btn:hover { border-color: var(--yt-color); box-shadow: 0 8px 15px rgba(255, 77, 77, 0.2); }
+            .yt-btn:hover i { transform: scale(1.1); }
             
-            .tt-btn:hover { border-color: var(--tt-cyan); box-shadow: 0 10px 20px rgba(0, 242, 254, 0.15); }
-            .tt-btn:hover i { 
-                background: linear-gradient(45deg, var(--tt-cyan), var(--tt-magenta));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transform: scale(1.1);
-            }
+            .tt-btn:hover { border-color: var(--tt-cyan); box-shadow: 0 8px 15px rgba(0, 242, 254, 0.2); }
+            .tt-btn:hover i { transform: scale(1.1); }
             
-            .donate-btn:hover { border-color: var(--donate-color); box-shadow: 0 10px 20px rgba(255, 170, 0, 0.15); }
-            .donate-btn:hover i { color: var(--donate-color); transform: scale(1.1); }
+            .donate-btn:hover { border-color: var(--donate-color); box-shadow: 0 8px 15px rgba(255, 209, 102, 0.2); }
+            .donate-btn:hover i { transform: scale(1.1); }
         }
         
         .link-btn:active { transform: scale(0.97); }
 
         /* ===== SPONSOR ===== */
         .sponsor-block {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: var(--radius-md);
             padding: 20px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: var(--transition);
         }
 
         .sponsor-block:hover {
-            background: rgba(255, 255, 255, 0.03);
-            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .sponsor-title {
@@ -299,9 +281,16 @@
         .delay-5 { animation-delay: 0.5s; }
         .delay-6 { animation-delay: 0.6s; }
 
-        /* ===== MOBILE ===== */
+        /* ===== MOBILE ONLY (Осталось только необходимое) ===== */
         @media (max-width: 600px) {
             body { padding: 0; }
+            
+            /* СМЕНА ФОНА НА МОБИЛЬНЫЙ */
+            .bg-image {
+                background-image: url('https://art.playoxide.com/assets/m-02.jpg');
+            }
+
+            /* Убираем стеклянный контейнер на телефонах для экономии места */
             .container {
                 padding: 40px 20px;
                 border-radius: 0;
@@ -311,28 +300,18 @@
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
             }
+            
             .avatar-wrapper { width: 110px; height: 110px; }
             h1 { font-size: 1.8rem; }
-            .bio { font-size: 0.95rem; }
-            .link-btn { padding: 14px 18px; border-radius: 16px; }
-            .link-btn i { font-size: 1.8rem; margin-right: 15px; width: 35px; }
-            .tg-btn i { color: #55b4e6; }
-            .yt-btn i { color: #ff4d4d; }
-            .tt-btn i { color: #fff; text-shadow: -1px -1px 0 var(--tt-cyan), 1px 1px 0 var(--tt-magenta); }
-            .donate-btn i { color: #ffd166; }
-            
-            /* Делаем сферы фона больше на телефонах, чтобы они занимали весь экран */
-            .blob-1 { width: 90vw; height: 90vw; top: -10%; left: -20%; }
-            .blob-2 { width: 80vw; height: 80vw; bottom: -10%; right: -20%; }
         }
     </style>
 </head>
 <body>
-    <!-- Живой фон -->
-    <div class="bg-animated">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <!-- Живое изображение на заднем плане + Размытие -->
+    <div class="bg-image"></div>
+    
+    <!-- Полупрозрачное черное затемнение поверх фона -->
+    <div class="bg-overlay"></div>
 
     <main class="container" role="main">
         
